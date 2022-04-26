@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: k5smovie-review-svc
+  labels:
+    app: k5smovie-review-svc
+spec:
+  type: ClusterIP
+  selector:
+    app: k5smovie-review
+  ports:
+    - protocol : TCP
+      port : 80
+      targetPort : 8080
+    

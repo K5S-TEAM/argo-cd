@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k5smovie-review-deploy
+  labels:
+    app: k5smovie-review-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k5smovie-review
+  template:
+    metadata:
+      labels:
+        app: k5smovie-review
+    spec:
+      containers:
+      - name: review-spring-boot
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_review:v14
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
