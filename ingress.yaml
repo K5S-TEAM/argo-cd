@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: spring-ingress # 인그레스 이름 정하기
+  namespace: default    # 설치할 네임스페이스
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /auth
+          pathType: Prefix
+          backend:
+            service:
+              name: k5smovie-auth-svc
+              port:
+                number: 80  # (이부분도 고정)
