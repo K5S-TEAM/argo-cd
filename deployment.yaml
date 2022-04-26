@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-infochat
+  labels:
+    app: infochat
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: infochat
+  template:
+    metadata:
+      labels:
+        app: infochat
+    spec:
+      containers:
+      - name: demo-infochat
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_infochat:v19
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
