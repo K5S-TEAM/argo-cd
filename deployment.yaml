@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k5smovie-member-convenience-deploy
+  labels:
+    app: k5smovie-member-convenience-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k5smovie-member-convenience
+  template:
+    metadata:
+      labels:
+        app: k5smovie-member-convenience
+    spec:
+      containers:
+      - name: member-convenience-spring-boot
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_member_convenience:v5
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+        - containerPort: 8081
+        - containerPort: 3306
