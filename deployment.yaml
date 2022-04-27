@@ -16,9 +16,7 @@ spec:
     spec:
       containers:
       - name: review-spring-boot
-        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_review:v27
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_review:v28
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        - containerPort: 8081
-        - containerPort: 3307
