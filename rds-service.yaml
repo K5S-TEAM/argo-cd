@@ -6,6 +6,6 @@ spec:
   type: ExternalName
   externalName: k5s-rds-auth.cuxeaywhwt9d.ap-northeast-2.rds.amazonaws.com
   ports:
-  - port: 3308
-    targetPort: 3308
+  - port: 33308
+    targetPort: 33308
 selector:
