@@ -9,4 +9,4 @@ spec:
   ports:
   - port: 3306
     targetPort: 3308
-selector: {} 
+selector:
