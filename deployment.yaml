@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: demo-infochat
-        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_infochat:v32
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_infochat:v35
         imagePullPolicy : IfNotPresent
         ports:
         - containerPort: 8080
-        - containerPort: 13306
+        - containerPort: 3306
