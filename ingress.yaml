@@ -5,7 +5,7 @@ metadata:
   namespace: default    # 설치할 네임스페이스
   annotations:
     kubernetes.io/ingress.class: alb
-    alb.ingress.kubernetes.io/group.name: k5sIngress
+    alb.ingress.kubernetes.io/group.name: k5s-Ingress
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/backend-protocol: HTTPS
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:262213740647:certificate/03d72a3a-2e44-498d-9dfe-75d4ec840b63
