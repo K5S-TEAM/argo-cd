@@ -5,7 +5,7 @@ metadata:
   labels:
     app: k5smovie-review-svc
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: k5smovie-review
   ports:
