@@ -5,7 +5,7 @@ metadata:
   labels:
     app: k5smovie-auth-svc
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: k5smovie-auth
   ports:
