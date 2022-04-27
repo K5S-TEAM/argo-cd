@@ -16,10 +16,7 @@ spec:
     spec:
       containers:
       - name: review-spring-boot
-        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_review:v17
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_review:v18
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
-        env:
-        - name: MYSQL_SERVICE_HOST
-          value: 3.230.66.6
