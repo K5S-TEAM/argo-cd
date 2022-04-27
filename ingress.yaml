@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: infochat-ingress # 인그레스 이름 정하기
+  name: k5smovie-infochat-ingress # 인그레스 이름 정하기
   namespace: default    # 설치할 네임스페이스
   annotations:
     kubernetes.io/ingress.class: alb
@@ -14,6 +14,6 @@ spec:
           pathType: ImplementationSpecific
           backend:
             service:
-              name: demo-infochat # 연결할 서비스 (이부분은 고정)
+              name: k5smovie-infochat-svc # 연결할 서비스 (이부분은 고정)
               port:
                 number: 80  # (이부분도 고정)
