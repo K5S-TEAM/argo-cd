@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: auth-spring-boot
-        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_auth:v21
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_auth:v22
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
