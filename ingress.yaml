@@ -6,6 +6,7 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: alb
     alb.ingress.kubernetes.io/group.name: k5s-ingress
+    alb.ingress.kubernetes.io/group.order: '4'
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:ap-northeast-2:262213740647:certificate/2641b952-9b2c-445b-aa14-06392dba0155
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTPS":443}, {"HTTP":80}]'
@@ -14,13 +15,6 @@ spec:
   rules:
   - http:
       paths:
-        - path: /
-          pathType: ImplementationSpecific
-          backend:
-            service:
-              name: k5smovie-infochat-svc # 연결할 서비스 (이부분은 고정)
-              port:
-                number: 80  # (이부분도 고정)
         - path: /movies
           pathType: Prefix
           backend:
@@ -41,4 +35,11 @@ spec:
             service:
               name: k5smovie-infochat-svc # 연결할 서비스 (이부분은 고정)
               port:
-                number: 80  # (이부분도 고정)                
+                number: 80  # (이부분도 고정)   
+        - path: /
+          pathType: Exact
+          backend:
+            service:
+              name: k5smovie-infochat-svc # 연결할 서비스 (이부분은 고정)
+              port:
+                number: 80  # (이부분도 고정)
