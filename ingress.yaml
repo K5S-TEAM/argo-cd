@@ -27,4 +27,11 @@ spec:
             service:
               name: k5smovie-infochat-svc # 연결할 서비스 (이부분은 고정)
               port:
-                number: 80  # (이부분도 고정)        
+                number: 80  # (이부분도 고정)
+        - path: /chat
+          pathType: Prefix
+          backend:
+            service:
+              name: k5smovie-infochat-svc # 연결할 서비스 (이부분은 고정)
+              port:
+                number: 80  # (이부분도 고정)                
