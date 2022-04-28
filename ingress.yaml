@@ -14,7 +14,7 @@ spec:
   rules:
   - http:
       paths:
-        - path: /movies/*
+        - path: /movies/*/reviews
           pathType: ImplementationSpecific
           backend:
             service:
