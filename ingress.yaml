@@ -14,7 +14,7 @@ spec:
   rules:
   - http:
       paths:
-        - path: /auth/login
+        - path: /auth
           pathType: Prefix
           backend:
             service:
