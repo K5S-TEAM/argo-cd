@@ -22,7 +22,7 @@ spec:
               name: k5smovie-review-svc
               port:
                 number: 80  # (이부분도 고정)
-        - path: /reviews
+        - path: /reviews/*
           pathType: ImplementationSpecific
           backend:
             service:
