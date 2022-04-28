@@ -14,8 +14,8 @@ spec:
   rules:
   - http:
       paths:
-        - path: /movies/d
-          pathType: Prefix
+        - path: /movies/*/reviews
+          pathType: Implementation
           backend:
             service:
               name: k5smovie-review-svc
