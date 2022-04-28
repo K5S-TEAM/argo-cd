@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: infochat-spring-boot
-        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_infochat:v68
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_infochat:v69
         imagePullPolicy : IfNotPresent
         ports:
         - containerPort: 8080
