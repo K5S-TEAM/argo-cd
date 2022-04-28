@@ -15,6 +15,13 @@ spec:
   rules:
   - http:
       paths:
+        - path: /movies/*/reviews
+          pathType: ImplementationSpecific
+          backend:
+            service:
+              name: k5smovie-review-svc
+              port:
+                number: 80  # (이부분도 고정)
         - path: /movies/*/reviews/*
           pathType: ImplementationSpecific
           backend:
