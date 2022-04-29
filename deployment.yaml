@@ -5,7 +5,7 @@ metadata:
   labels:
     app: k5smovie-review-deploy
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: k5smovie-review
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: review-spring-boot
-        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_review:v71
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_review:v73
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
