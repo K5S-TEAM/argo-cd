@@ -16,16 +16,9 @@ spec:
     spec:
       containers:
       - name: review-spring-boot
-        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_review:v75
+        image: 262213740647.dkr.ecr.ap-northeast-2.amazonaws.com/k5s_review:v76
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
         - containerPort: 8081
         - containerPort: 3306
-        resources:
-          requests:
-            memory: "64Mi"
-            cpu: "250m"
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
